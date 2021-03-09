@@ -6,8 +6,11 @@ public class Profession {
     private String education;
     private int birthday;
 
-    public Profession() {
-        this.name = this.getClass().getName();
+    public Profession(String name, String surname, String education, int birthday) {
+        this.name = name;
+        this.surname = surname;
+        this.education = education;
+        this.birthday = birthday;
     }
 
     public String getName() {
@@ -27,11 +30,14 @@ public class Profession {
     }
 
     public static void main(String[] args) {
-        Profession man = new Builder();
+        Profession man = new Builder("Petya", "Ivanov", "MISI", 1980);
         System.out.println(man.getName());
 
-        Profession man1 = new Programmer();
-        System.out.println(man1.getName());
+        Programmer man1 = new Programmer("Vasya", "Petrov", "MIPT", 1985, "JAVA");
+        System.out.println(man1.getLanguage());
+
+        Surgeon man3 = new Surgeon("Vasya", "Petrov", "Sechenov university",
+                                    1985, "Botkinskaya hospital");
+        System.out.println(man3.getWorkPlace());
     }
 }
-
