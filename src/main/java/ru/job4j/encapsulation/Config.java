@@ -18,9 +18,13 @@ public class Config {
     }
 
     private String search(String key) {
-        for (String step : properties)
-            if (!step.equals(key))
+        for (String step : properties) {
+            if (!step.equals(key)) {
                 return "Incorrect key";
+            } else {
+                return key;
+            }
+        }
         return key;
     }
 }
