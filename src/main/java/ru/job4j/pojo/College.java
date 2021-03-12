@@ -9,9 +9,9 @@ public class College {
         student.setGroup(202);
         student.setDateOfAdmission(new Date(2000, 5, 6));
 
-        System.out.println(student.getName() + "\ngroup: "
-                + student.getGroup() + "\nyear of admission: "
-                + student.getDateOfAdmission().getYear() + "\nmonth of admission: "
+        System.out.println(student.getName() + System.lineSeparator() + "group: "
+                + student.getGroup() + System.lineSeparator() + "year of admission: "
+                + student.getDateOfAdmission().getYear() + System.lineSeparator() + "month of admission: "
                 + student.getDateOfAdmission().getMonth());
     }
 }
