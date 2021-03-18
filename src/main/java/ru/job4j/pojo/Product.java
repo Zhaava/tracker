@@ -9,15 +9,19 @@ public final class Product {
         this.price = price;
     }
 
-    public int price() {
-        return price - discount();
+    public String getName() {
+        return name;
     }
 
-    public int discount() {
-        return 0;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String label() {
-        return name + " " + price();
+    public int getPrice() {
+        return price;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
     }
 }
