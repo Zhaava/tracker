@@ -31,4 +31,14 @@ public class ShopTest {
         int rsl = Shop.indexOfNull(products);
         assertThat(rsl, is(-1));
     }
+
+    @Test
+    public void whenSecondNull() {
+        Product products[] = new Product[3];
+        products[0] = new Product("Milk", 10);
+        products[1] = null;
+        products[2] = new Product("Egg", 19);
+        int rsl = Shop.indexOfNull(products);
+        assertThat(rsl, is(1));
+    }
 }
