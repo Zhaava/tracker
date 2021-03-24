@@ -17,8 +17,9 @@ public class StartUI {
         tracker.add(item3);
         tracker.add(item4);
         tracker.add(item5);
-
-        tracker.findByName("Sidorov");
-
+        System.out.println(tracker.findById(3));
+        System.out.println(tracker.findByName("Sidorov"));
+        for (Item i : tracker.findByName("Sidorov"))
+            System.out.println(i);
     }
 }
