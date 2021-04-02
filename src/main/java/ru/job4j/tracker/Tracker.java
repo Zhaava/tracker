@@ -8,14 +8,12 @@ public class Tracker {
     private int size = 0;
 
     public boolean replace(int id, Item item) {
-        boolean rsl;
+        boolean rsl = false;
         int index = indexOf(id);
         if (index != -1) {
             item.setId(id);
             items[index] = item;
             rsl = true;
-        } else {
-            rsl = false;
         }
         return rsl;
     }
