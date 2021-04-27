@@ -7,13 +7,13 @@ public class ConsoleInput implements Input {
 
     @Override
     public String askStr(String question) {
-        System.out.println(question);
+        System.out.print(question);
         return scanner.nextLine();
     }
 
     @Override
     public int askInt(String question) {
-        System.out.println(question);
+        System.out.print(question);
         return Integer.parseInt(scanner.nextLine());
     }
 }
