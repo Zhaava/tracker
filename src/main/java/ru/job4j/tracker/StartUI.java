@@ -14,10 +14,14 @@ public class StartUI {
     }
 
     public static void showItems(Input input, Tracker tracker) {
-        System.out.println("=== Show existing Items ====");
+        System.out.println("=== Show all Items ====");
         Item[] items = tracker.findAll();
-        for (Item it : items) {
-            System.out.println(it);
+        if (items.length > 0) {
+            for (Item item : items) {
+                System.out.println(item);
+            }
+        } else {
+            System.out.println("Хранилище еще не содержит заявок");
         }
     }
 
