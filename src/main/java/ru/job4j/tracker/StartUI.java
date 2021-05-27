@@ -9,8 +9,8 @@ public class StartUI {
         System.out.println("=== Create a new Item ====");
         String name = input.askStr("Enter name: ");
         Item item = new Item(name);
-        System.out.println("Добавленная заявка: " + item);
         tracker.add(item);
+        System.out.println("Добавленная заявка: " + item);
     }
 
     public static void showItems(Input input, Tracker tracker) {
