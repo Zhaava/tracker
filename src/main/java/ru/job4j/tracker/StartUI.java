@@ -38,12 +38,12 @@ public class StartUI {
     }
 
     public static void deleteItem(Input input, Tracker tracker) {
-        System.out.println("=== Delete item by id ====");
-        int id = input.askInt("Enter id item to delete: ");
+        System.out.println("=== Delete item ====");
+        int id = input.askInt("Enter id: ");
         if (tracker.delete(id)) {
-            System.out.println("Operation succeed.");
+            System.out.println("Заявка удалена успешно.");
         } else {
-            System.out.println("Operation is incorrect.");
+            System.out.println("Ошибка удаления заявки.");
         }
     }
 
