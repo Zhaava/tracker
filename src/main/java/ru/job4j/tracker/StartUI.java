@@ -26,14 +26,14 @@ public class StartUI {
     }
 
     public static void editItem(Input input, Tracker tracker) {
-        System.out.println("=== Rename item by id ====");
-        int id = input.askInt("Enter id item to edit: ");
-        String name = input.askStr("Enter new name to item: ");
+        System.out.println("=== Edit item ====");
+        int id = input.askInt("Enter id: ");
+        String name = input.askStr("Enter name: ");
         Item item = new Item(name);
         if (tracker.replace(id, item)) {
-            System.out.println("Operation succeed.");
+            System.out.println("Заявка изменена успешно.");
         } else {
-            System.out.println("Operation is incorrect.");
+            System.out.println("Ошибка замены заявки.");
         }
     }
 
