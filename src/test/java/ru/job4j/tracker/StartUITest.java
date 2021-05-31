@@ -19,24 +19,29 @@ public class StartUITest {
     }
 
     @Test
-    public void whenAddItem1() {
-        String[] answers = {"test"};
-        Input input = new StubInput(answers);
+    public void whenReplaceItem() {
         Tracker tracker = new Tracker();
-        StartUI.createItem(input, tracker);
-        Item created = tracker.findAll()[0];
-        Item expected = new Item("test");
-        assertThat(created.getName(), is(expected.getName()));
+        Item item = new Item("new item");
+        tracker.add(item);
+        String[] answers = {
+                String.valueOf(item.getId()), /* id сохраненной заявки в объект tracker. */
+                "replaced item"
+        };
+        StartUI.replaceItem(new StubInput(answers), tracker);
+        Item replaced = tracker.findById(item.getId());
+        assertThat(replaced.getName(), is("replaced item"));
     }
 
     @Test
-    public void whenAddItem2() {
-        String[] answers = {"test1"};
-        Input input = new StubInput(answers);
+    public void whenDeleteItem() {
         Tracker tracker = new Tracker();
-        StartUI.createItem(input, tracker);
-        Item created = tracker.findAll()[0];
-        Item expected = new Item("test1");
-        assertThat(created.getName(), is(expected.getName()));
+        Item item = new Item("new item");
+        tracker.add(item);
+        String[] answers = {
+                String.valueOf(item.getId()), /* id сохраненной заявки в объект tracker. */
+                "deleted item"
+        };
+        StartUI.deleteItem(new StubInput(answers), tracker);
+        assertThat(tracker.findAll().length, is(0));
     }
 }
