@@ -85,14 +85,15 @@ public class StartUITest {
                 new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is("Menu.\n" +
-                "0. Show all items\n" +
-                "1. Exit\n" +
-                "=== Show all Items ====\n" +
-                item.toString() + "\n" +
-                "Menu.\n" +
-                "0. Show all items\n" +
-                "1. Exit\n"));
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is("Menu." + ln +
+                "0. Show all items" + ln +
+                "1. Exit" + ln +
+                "=== Show all Items ====" + ln +
+                item + ln +
+                "Menu." + ln +
+                "0. Show all items" + ln +
+                "1. Exit" + ln));
     }
 
     @Test
@@ -108,14 +109,15 @@ public class StartUITest {
                 new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is("Menu.\n" +
-                "0. Find item by ID\n" +
-                "1. Exit\n" +
-                "=== Find item by id ====\n" +
-                item.toString() + "\n" +
-                "Menu.\n" +
-                "0. Find item by ID\n" +
-                "1. Exit\n"));
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is("Menu." + ln +
+                "0. Find item by ID" + ln +
+                "1. Exit" + ln +
+                "=== Find item by id ====" + ln +
+                item + ln +
+                "Menu." + ln +
+                "0. Find item by ID" + ln +
+                "1. Exit" + ln));
     }
 
     @Test
@@ -131,13 +133,14 @@ public class StartUITest {
                 new Exit()
         };
         new StartUI(out).init(in, tracker, actions);
-        assertThat(out.toString(), is("Menu.\n" +
-                "0. Find items by name\n" +
-                "1. Exit\n" +
-                "=== Find items by name ====\n" +
-                item.toString() + "\n" +
-                "Menu.\n" +
-                "0. Find items by name\n" +
-                "1. Exit\n"));
+        String ln = System.lineSeparator();
+        assertThat(out.toString(), is("Menu." + ln +
+                "0. Find items by name" + ln +
+                "1. Exit" + ln +
+                "=== Find items by name ====" + ln +
+                item + "" + ln +
+                "Menu." + ln +
+                "0. Find items by name" + ln +
+                "1. Exit" + ln));
     }
 }
