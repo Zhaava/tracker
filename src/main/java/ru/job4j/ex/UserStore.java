@@ -12,17 +12,15 @@ public class UserStore {
         }
         if (rsl == null) {
             throw new UserNotFoundException("User is not found in list");
-        } else {
-            return rsl;
         }
+        return rsl;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
         if (user.isValid() == false || user.getUsername().length() < 3) {
             throw new UserInvalidException("User is not valid");
-        } else {
-            return true;
         }
+        return true;
     }
 
     public static void main(String[] args) {
