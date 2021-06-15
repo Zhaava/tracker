@@ -38,7 +38,8 @@ public class ValidateInputTest {
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
         int selected2 = input.askInt("Enter menu:");
-        assertThat(String.valueOf(selected) + String.valueOf(selected2), is("16"));
+        int array[] = {selected, selected2};
+        assertThat(array, is(new int[]{1, 6}));
     }
 
     @Test
