@@ -25,7 +25,7 @@ public final class Airbus {
         int countEngineLocal = 0;
         if (name.equals("A380")) {
             countEngineLocal = 4;
-        } else if (name.equals("A400")) {
+        } else if (name.equals("Ан-225")) {
             countEngineLocal = 6;
         } else {
             countEngineLocal = COUNT_ENGINE;

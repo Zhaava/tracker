@@ -13,9 +13,9 @@ public class Airport {
         airbus.printModel();
         airbus.printCountEngine();
 
-        airbus = new Airbus("A400");
+        airbus = new Airbus("Ан-225");
         System.out.println(airbus);
-        airbus.setName("A400");
+        airbus.setName("Ан-225");
         airbus.printModel();
         airbus.printCountEngine();
     }
