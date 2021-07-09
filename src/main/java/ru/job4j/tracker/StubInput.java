@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class StubInput implements Input {
-//    private String[] answers;
     List<String> answers = new ArrayList<>();
     private int position = 0;
 
