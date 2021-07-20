@@ -23,14 +23,13 @@ public class ItemTest {
                 new Item(5,"Vladimir")
         );
         Collections.sort(items, new SortByIdItemUp());
-        List<Integer> idItems = Arrays.asList(
-                items.get(0).getId(),
-                items.get(1).getId(),
-                items.get(2).getId(),
-                items.get(3).getId(),
-                items.get(4).getId()
-        );
-        assertThat(idItems, is(Arrays.asList(1,2,3,4,5)));
+        assertThat(items, is(Arrays.asList(
+                new Item(1,"Ivan"),
+                new Item(2,"Petr"),
+                new Item(3,"Sergey"),
+                new Item(4,"Alexey"),
+                new Item(5,"Vladimir")
+        )));
     }
 
     @Test
@@ -43,13 +42,12 @@ public class ItemTest {
                 new Item(5,"Vladimir")
         );
         Collections.sort(items, new SortByIdItemDown());
-        List<Integer> idItems = Arrays.asList(
-                items.get(0).getId(),
-                items.get(1).getId(),
-                items.get(2).getId(),
-                items.get(3).getId(),
-                items.get(4).getId()
-        );
-        assertThat(idItems, is(Arrays.asList(5,4,3,2,1)));
+        assertThat(items, is(Arrays.asList(
+                new Item(5,"Vladimir"),
+                new Item(4,"Alexey"),
+                new Item(3,"Sergey"),
+                new Item(2,"Petr"),
+                new Item(1,"Ivan")
+        )));
     }
 }
