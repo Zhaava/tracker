@@ -12,5 +12,6 @@ public class Surgeon extends Doctor {
         return workPlace;
     }
 
-    public  void cutAppendix() {}
+    public  void cutAppendix() {
+    }
 }

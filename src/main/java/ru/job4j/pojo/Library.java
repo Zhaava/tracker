@@ -7,7 +7,6 @@ public class Library {
         Book cleanCode = new Book("Clean code", 600);
         Book physics = new Book("Physics", 500);
 
-
         Book[] books = new Book[4];
         books[0] = electronics;
         books[1] = pushkin;

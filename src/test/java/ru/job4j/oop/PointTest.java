@@ -14,6 +14,7 @@ public class PointTest {
         double dist = a.distance(b);
         assertThat(dist, closeTo(2, 0.001));
     }
+
     @Test
     public void distanceBetweenPoints3() {
         Point a = new Point(0, 0);
