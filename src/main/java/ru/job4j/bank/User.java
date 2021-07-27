@@ -2,7 +2,15 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс является моделью данных пользователя.
+ * @author ZHAVORONKOV ALEXEY
+ * @version 1.0
+ */
 public class User {
+    /**
+     * Данная модель содержит поля: номер паспорта и ФИО пользователя.
+     */
     private String passport;
     private String username;
 
