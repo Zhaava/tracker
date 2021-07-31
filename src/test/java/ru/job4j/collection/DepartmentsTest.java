@@ -64,13 +64,13 @@ public class DepartmentsTest {
         List<String> expect = Arrays.asList(
                 "k2",
                 "k2/sk1",
-                "k2/sk1/ssk2",
                 "k2/sk1/ssk1",
+                "k2/sk1/ssk2",
                 "k1",
-                "k1/sk2",
                 "k1/sk1",
+                "k1/sk1/ssk1",
                 "k1/sk1/ssk2",
-                "k1/sk1/ssk1"
+                "k1/sk2"
                 );
 
         List<String> result = Departments.fillGaps(input);
