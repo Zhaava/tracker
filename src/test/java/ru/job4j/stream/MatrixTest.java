@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 public class MatrixTest {
     @Test
     public void whenMatrixToList() {
-        int[][] matrix = {
+        Integer[][] matrix = {
                 {4, 3, 1},
                 {8, 2, 6},
                 {2, 3, 7}
