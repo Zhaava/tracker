@@ -78,7 +78,8 @@ public class SchoolTest {
                 new Student(30, "Smirnov"),
                 new Student(40, "Sidorov"),
                 new Student(60, "Voronin"),
-                new Student(90, "Popov")
+                new Student(90, "Popov"),
+                new Student(40, "Sidorov")
         );
         School sc = new School();
         Map<String, Student> rsl = sc.collectMap(students);
