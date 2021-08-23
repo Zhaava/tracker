@@ -32,7 +32,7 @@ public class Card {
         Value[] values = Value.values();
         Stream.of(suits)
                 .flatMap(suit1 -> Stream.of(values)
-                    .map(value1 -> new Card(suit1, value1).toString()))
+                    .map(value1 -> new Card(suit1, value1)))
                 .forEach(System.out::println);
     }
 }
